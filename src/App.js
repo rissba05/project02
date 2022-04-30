@@ -1,23 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
+import Addition from './addition';
 
-function App() {
+const App = () => {
+
+  const styles = {
+    container: {
+      backgroundColor: "lightblue"
+      , border: "dashed red"
+      , padding: "20px"
+      , color: "blue"
+    }
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div 
+      style={styles.container}
+    >
+      <h1>Project 2</h1>
+      <h2>Adding Two Numbers</h2>
+      <Addition numberOne={5}numberTwo={6}/>
+      <Addition numberOne={25}numberTwo={75}/>
+      <Addition numberOne={2798}numberTwo={3892}/>
     </div>
   );
 }
